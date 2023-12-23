@@ -6,18 +6,18 @@
 class Interval
 {
 public:
-	float min;
-	float max;
+    float min;
+    float max;
 
-	static const Interval empty;
-	static const Interval universe;
+    static const Interval empty;
+    static const Interval universe;
 
-	Interval();
-	Interval(const float min, const float max);
+    Interval();
+    Interval(const float min, const float max);
 
-	bool contains(const float num) const;
-	bool surrounds(const float num) const;
-	float clamp(const float num) const;
+    bool contains(const float num) const;
+    bool surrounds(const float num) const;
+    float clamp(const float num) const;
 };
 
 const static Interval empty(std::numeric_limits<float>::infinity(), -1 * std::numeric_limits<float>::infinity());

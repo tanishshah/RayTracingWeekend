@@ -9,13 +9,13 @@
 class Sphere : public Hittable
 {
 private:
-	glm::vec3 origin;
-	float radius;
-	std::shared_ptr<Material> material;
+    glm::vec3 origin;
+    float radius;
+    std::shared_ptr<Material> material;
 
 public:
-	Sphere(const glm::vec3 origin, const float radius, std::shared_ptr<Material> mat);
-	bool hit(const Ray& ray, const Interval t_range, Hit_Record& record) const override;
+    Sphere(const glm::vec3 origin, const float radius, std::shared_ptr<Material> mat);
+    bool hit(const Ray& ray, const Interval t_range, Hit_Record& record) const override;
 };
 
 #endif
